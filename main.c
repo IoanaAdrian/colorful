@@ -1,21 +1,26 @@
-//
-// Created by Adrian on 2/1/2022.
-//
-#include "colorful.hpp"
+#include "colorful.h"
 int main(){
-	puts("this is just a test");
+	printf("normal looking text\n");
+
 	c_red();
-	puts("this is just a test");
+	printf("red text on a black background");
+	c_nlreset();
 
 	c_blue();
-	puts("this is just a test");
+	printf("blue text on a white background");
+	c_nlreset();
 
 	c_green();
-	puts("this is just a test");
+	printf("green text on a black background");
+	c_nlreset();
 
-	c_special(BOLD);
-	puts("this is just a test");
-	c_reset();
-	puts("everything should go back to normal");
+	c_special(C_BOLD);
+	printf("bold text");
+	c_nlreset();
+
+	c_rainbow("rainbow text rainbow text rainbow text rainbow text");
+	c_nlreset();
+
+	printf("everything should go back to normal\n");
 	return 0;
 }
